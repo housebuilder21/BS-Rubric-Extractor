@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Brightspace Rubric Extractor",
+  "version": "1.0.0",
+  "description": "Takes a visible rubric in Brightspace and turns it into a markdown table, ready for download.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_state": "enabled"
+  },
+  "background": {
+    "service_worker": "activator.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["injector.js"],
+      "matches": ["https://lms.nait.ca/*"],
+      "css": ["extractor.css"]
+    }
+  ]
+}
