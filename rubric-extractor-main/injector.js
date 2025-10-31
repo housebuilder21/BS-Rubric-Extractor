@@ -243,7 +243,8 @@ let insertCriterias = function (tableBody, criteriaTable) {
                         .querySelector("d2l-html-block")
                         .shadowRoot
                         .querySelector(".d2l-html-block-rendered")
-                        .innerText;
+                        .innerText
+                        .replace(/[\r\n]+/gm, ' '); // Replace newlines with spaces.
 
                     // Points Extraction (if applicable)
                     let pointsText = cellDOM.querySelector(".custom-points");
