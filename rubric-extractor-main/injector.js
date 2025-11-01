@@ -385,11 +385,12 @@ const injectExtractor = function () {
 
     // Add HTML
     document.querySelector("body").insertAdjacentHTML("beforeend", `
-        <div class="extractor-toast fixed-top border mx-auto mt-3 py-2 px-3 rounded-5">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-utilities.min.css" />
-            <button class="extractor-close btn position-absolute top-50 translate-middle p-1 bg-danger rounded-pill">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x position-absolute translate-middle"
-                    viewBox="0 0 16 16">
+        <div class="extractor-toast fixed-top border shadow-sm mx-auto mt-3 py-2 px-3 rounded-5 bg-white">
+            <link rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-utilities.min.css" />
+            <button class="extractor-close btn position-absolute shadow-sm p-1 bg-danger rounded-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-x position-absolute translate-middle" viewBox="0 0 16 16">
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
                 </svg>
@@ -399,12 +400,24 @@ const injectExtractor = function () {
                 <button role="button" class="d-none extractor-download btn btn-primary rounded-pill">Download!</button>
                 <p class="no-rubric-msg text-body-tertiary">No rubric detected...</p>
             </div>
-            <select name="format" id="format" class="extractor-select position-absolute top-50 form-select rounded-pill">
+            <select name="format" id="format"
+                class="extractor-select position-absolute form-select shadow-sm rounded-pill">
                 <option value="markdown-table" class="">Table &gt; Markdown</option>
                 <!--option value="markdown-list">Bulleted List &gt; Markdown</option-->
                 <option value="json">JSON</option>
                 <!--option value="csv">CSV</option-->
             </select>
+            <div class="extractor-notif toast position-absolute translate-middle-x">
+                <div class="toast-header justify-content-between">
+                    <strong>Error</strong>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <div class="toast-body text-danger-emphasis">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed convallis velit. Morbi ultrices
+                    egestas ante,
+                    hendrerit sagittis mauris port quis molestie arcu volutpat.
+                </div>
+            </div>
         </div>`
     );
 
