@@ -1,5 +1,5 @@
 // DEBUG Decleration
-const DEBUG = true;
+const DEBUG = false;
 
 /**
  * Prints out any arguments passed as long as `DEBUG` is set to true.
